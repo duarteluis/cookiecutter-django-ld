@@ -1,6 +1,6 @@
 # {{ cookiecutter.project_name }}
 
-Foobar is a Python library for dealing with word pluralization.
+A django platform, ready to start a new project
 
 ## Installation
 
