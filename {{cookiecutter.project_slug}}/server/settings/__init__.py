@@ -1,3 +1,5 @@
+# settings/__init__.py
+
 """
 Django settings for server project.
 
@@ -10,20 +12,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
-from pathlib import Path
+from .base import *
+from .apps import *
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3(z*xfs^r6mkrtimu9-8r!&oydtx%db(s^gap0lfb#fk1*vizk'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+{% if cookiecutter.database == "sqlite" %}
+from .database_dev import *
+# from .database_prod import *
+{% elif cookiecutter.database == "postgresql" %}
+# from .database_dev import *
+from .database_prod import *
+{% endif %}
 
 ALLOWED_HOSTS = []
 
@@ -37,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.'
 ]
 
 MIDDLEWARE = [
