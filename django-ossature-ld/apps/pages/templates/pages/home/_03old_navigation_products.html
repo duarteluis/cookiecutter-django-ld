@@ -1,0 +1,124 @@
+{% load static %}
+{% load i18n %}
+
+<!-- TODO Enlever style="margin-top: -140px" -->
+<section id="nav_products" class="section section-no-background" style="margin-top: -165px">
+    <div class="container mb-lg">
+        <div class="row mb-5 pb-3 ">
+
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" style="animation-delay: 600ms;">
+
+                <div class="card flip-card flip-card-3d text-center rounded-0">
+                    <div class="flip-front p-4">
+                        <div class="flip-content my-4">
+                            <strong class="font-weight-extra-bold text-color-dark line-height-1 text-10 mb-3 d-inline-block">{% trans 'TFT' %}</strong>
+                            <h4 class="font-weight-bold text-color-primary text-4">{% trans 'Displays' %}</h4>
+                            <p>{% trans 'A complete scope from  <strong>1.44" up to 100"</strong>, in different technologies - <strong>TN, IPS, MVA or O-Film</strong>.' %}</p>
+                        </div>
+                    </div>
+
+                    <div class="flip-back d-flex  align-items-center p-5" style="background-image: url({% static 'images/homepage/buttons/button-maker-default.png' %}); background-size: cover; background-position: center;">
+                        <div class="flip-content my-4">
+                            <h4 class="font-weight-bold text-color-dark">{% trans 'TFT Display' %}</h4>
+                            <p class="font-weight-light text-color-dark">
+                                <img src="{% static 'images/homepage/buttons/tft-vignette-300-225.jpg' %}"  height="100px">
+                            </p>
+                            <p class="font-weight-light text-color-dark opacity-5">
+
+                            </p>
+                            <div class=""><br><br>
+
+                                <a href="{% url 'tft:tft-list' %}" class="btn btn-light btn-modern text-color-dark font-weight-bold">{% trans 'LEARN MORE' %}</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" style="animation-delay: 400ms;">
+
+                <div class="card flip-card flip-card-3d text-center rounded-0">
+                    <div class="flip-front  align-items-center">
+                        <div class="flip-content  align-items-center my-4">
+                            <strong class="font-weight-extra-bold text-color-dark line-height-1 text-10 mb-3 d-inline-block">{% trans 'TOUCH' %}</strong>
+                            <h4 class="font-weight-bold text-color-primary text-4">{% trans 'RTP or PCAP' %}</h4>
+                            <p>{% trans 'From basic to complex touch applications, either <strong>resistive or capacitive</strong>.' %}</p>
+                        </div>
+                    </div>
+                    <div class="flip-back d-flex  align-items-center p-5" style="background-image: url({% static 'images/homepage/buttons/button-maker-default.png' %}); background-size: cover; background-position: center;">
+                        <div class="flip-content my-4">
+                            <h4 class="font-weight-bold text-color-dark">{% trans 'TOUCH' %}</h4>
+                            <p class="font-weight-light text-color-dark">
+                                <img src="{% static 'images/homepage/buttons/touch-vignette.jpg' %}"  height="100px">
+                            </p>
+                            <p class="font-weight-light text-color-dark opacity-5">
+
+                            </p>
+                            <div class=""><br><br>
+
+                                <a href="#" class="btn btn-light btn-modern text-color-dark font-weight-bold">{% trans 'LEARN MORE' %}</a>
+                            </div>
+                            <!--<p class="font-weight-light text-color-dark opacity-5">&nbsp; </p>-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" style="animation-delay: 400ms;">
+
+                <div class="card flip-card flip-card-3d text-center rounded-0">
+                    <div class="flip-front p-4">
+                        <div class="flip-content my-4">
+                            <strong class="font-weight-extra-bold text-color-dark line-height-1 text-10 mb-3 d-inline-block">HMI</strong>
+                            <h4 class="font-weight-bold text-color-primary text-4">{% trans 'Human Machine Interface' %}</h4>
+                            <p>{% trans 'Complete solutions with ARM processor.' %}</p>
+                        </div>
+                    </div>
+                    <div class="flip-back d-flex  align-items-center p-5" style="background-image: url({% static 'images/homepage/buttons/button-maker-default.png' %}); background-size: cover; background-position: center;">
+                        <div class="flip-content my-4">
+                            <h4 class="font-weight-bold text-color-dark">{% trans 'HMI' %}</h4>
+                            <p class="font-weight-light text-color-dark">
+                                <img src="{% static 'images/homepage/buttons/panel-mount-computer.jpg' %}"  height="100px">
+                            </p>
+                            <p class="font-weight-light text-color-dark opacity-5">
+
+                            </p>
+                            <div class="">
+
+                                <a href="#" class="btn btn-light btn-modern text-color-dark font-weight-bold">{% trans 'LEARN MORE' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800" style="animation-delay: 600ms;">
+
+                <div class="card flip-card flip-card-3d text-center rounded-0">
+                    <div class="flip-front p-4">
+                        <div class="flip-content my-4">
+                            <strong class="font-weight-extra-bold text-color-dark line-height-1 text-10 mb-3 d-inline-block">{% trans 'PRINTER' %}</strong>
+                            <h4 class="font-weight-bold text-color-primary text-4">{% trans 'Thermal Printer' %}</h4>
+                            <p>{% trans 'A complete range of stand-alone or built-in printer' %}</p>
+                        </div>
+                    </div>
+                    <div class="flip-back d-flex align-items-center p-4" style="background-image: url({% static 'images/homepage/buttons/button-maker-default.png' %}); background-size: cover; background-position: center;">
+                        <div class="flip-content my-4">
+                            <h4 class="font-weight-bold text-color-dark">{% trans 'Thermal printer' %}</h4>
+                            <p class="font-weight-light text-color-dark opacity-5">
+
+                            </p>
+                            <div class=""><br><br>
+                                <a href="#" class="btn btn-light btn-modern text-color-dark font-weight-bold">{% trans 'LEARN MORE' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

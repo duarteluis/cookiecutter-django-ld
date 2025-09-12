@@ -1,0 +1,29 @@
+{% load static %}
+{% load i18n %}
+
+<section class="section section-no-border custom-section-spacement-1 bg-color-light m-1" id="custom">
+    <div role="main" class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading heading-border heading-middle-border heading-middle-border-center">
+                        <h1><strong class="text-primary">{% trans "FAQ" %}</strong>{% trans " Frequently Asked Questions" %}</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    {% for question in object_list %}
+                        <h2>{{ forloop.counter }} - {{ question.question }}</h2><br>
+                    <p class="lead text-justify">
+                        {{ question.answer }}
+                    </p>
+                    {% empty %}
+                    No questions yet.
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

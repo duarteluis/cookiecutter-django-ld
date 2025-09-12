@@ -1,0 +1,84 @@
+/* Add here all your CSS customizations */
+.bento-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;  /* Marge ajoutée en haut */
+    margin-bottom: 20px;  /* Marge ajoutée en bas */
+}
+
+.bento-item {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    min-height: 120px;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bento-item:hover {
+    transform: scale(1.05);
+}
+
+.item1 {
+    background: url('https://picsum.photos/600/600') center/cover;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item2 {
+    background: url('https://picsum.photos/500/200') center/cover;
+    grid-column: span 2;
+}
+
+.item3 {
+    background: linear-gradient(135deg, #8ad1e6, #0de0f3);
+    grid-column: span 2;
+}
+
+.item4 {
+    background: linear-gradient(135deg, #ecd98d, #dccd31);
+}
+
+.item5 {
+    background: linear-gradient(135deg, #eaae73, #e8832c);
+    grid-column: span 2;
+}
+
+.item6 {
+    background: linear-gradient(135deg, #c3f4ab, #38dc48);
+}
+
+@media (max-width: 768px) {
+    .bento-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .bento-container {
+        grid-template-columns: 1fr;
+    }
+    .bento-item {
+        font-size: 14px;
+        padding: 15px;
+    }
+    .item1, .item2, .item3, .item5 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block head_title %}{% endblock %}
+
+{% block topnav %}
+    {% include 'includes/_topnav.html' with active_tab='home' %}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+    {% block content %}
+
+    {% endblock content %}
+    </div>
+{%   endblock body %}
+
+{% block extra_body %}
+{% endblock extra_body %}

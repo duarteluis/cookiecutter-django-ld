@@ -1,0 +1,20 @@
+{% load static %}
+
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+<!-- SEO infos -->
+<title>{% block title %}{% endblock %} Cookiecutter Django LD</title>
+<meta name="title" content="{% block title_meta %}{% endblock %}">
+<meta name="description" content="{% block description %}{% endblock %}">
+<meta name="robots" content="{% block robots %}{% endblock %}">
+<meta name="keywords" content="{% block keywords %}{% endblock %}">
+<meta name="author" content="{% block author %}{% endblock %}">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+<link rel="apple-touch-icon" href="{% static 'apple-touch-icon.png' %}">

@@ -1,0 +1,113 @@
+{% load static %}
+{% load i18n %}
+
+<div class="slider-container rev_slider_wrapper" style="height: 800px;">
+	<div id="revolutionSlider" class="slider rev_slider manual" data-version="5.4.8">
+		<ul>
+			<li data-transition="fade">
+				<img src="{% static 'images/homepage/slides/slide-TFT.jpg' %}"
+					alt=""
+					data-bgposition="right center" 
+					data-bgfit="cover" 
+					data-bgrepeat="no-repeat"
+					class="rev-slidebg">
+
+				<h1 class="tp-caption text-uppercase font-weight-bold"
+					data-x="left" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="-120"
+					data-start="800" 
+					data-fontsize="40"
+					style="letter-spacing: -2px;" 
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'Do you need a TFT SOLUTION ?' %}</h1>
+
+				<div class="tp-caption text-uppercase text-color-dark"
+					data-x="left" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="-70"
+					data-start="1200"
+					data-fontsize="22"
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'OPTO Logic Technology your ultimate display partner' %}</div>
+
+				<a class="tp-caption btn btn-primary custom-btn-style-1 text-uppercase font-weight-semibold"
+					data-x="left" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="-10"
+					data-start="1500" 
+					data-fontsize="['12', '12', '12', '22']"
+					href="{% url 'tft:tft-list' %}"
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'Learn More' %}</a>
+			</li>
+
+			<li data-transition="fade">
+				<img src="{% static 'images/homepage/slides/slide-TOUCH.jpg' %}"
+					alt=""
+					data-bgposition="right top" 
+					data-bgfit="cover" 
+					data-bgrepeat="no-repeat"
+					class="rev-slidebg">
+
+				<h1 class="tp-caption text-uppercase font-weight-bold text-color-light"
+					data-x="right" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="-160"
+					data-start="800" 
+					data-fontsize="40"
+					style="letter-spacing: 0px;" 
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'Keep in TOUCH !' %}</h1>
+
+				<h2 class="tp-caption text-uppercase font-weight-bold text-color-light"
+					data-x="right" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="-100"
+					data-start="1200" 
+					data-fontsize="30"
+					style="letter-spacing: 0px;" 
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'For TOUCH Solutions' %}</h2>
+
+				<div class="tp-caption text-uppercase text-color-light"
+					data-x="right" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="-60"
+					data-start="1600"
+					data-fontsize="22"
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'We are here for YOU' %}</div>
+
+				<a class="tp-caption btn btn-secondary custom-btn-style-1 text-uppercase font-weight-semibold"
+					data-x="right" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="-10"
+					data-start="1800" 
+					data-fontsize="['12', '12', '12', '22']"
+					href="{% url 'pcap:pcap-landing' %}"
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'Learn More' %}</a>
+			</li>
+
+			<li data-transition="fade">
+				<img src="{% static 'images/homepage/slides/slide-HMI-2300-1533.jpg' %}"
+					alt=""
+					data-bgposition="right center" 
+					data-bgfit="cover" 
+					data-bgrepeat="no-repeat"
+					class="rev-slidebg">
+
+				<h1 class="tp-caption text-uppercase font-weight-bold"
+					data-x="left" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="170"
+					data-start="800" 
+					data-fontsize="40"
+					style="letter-spacing: -2px;" 
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'The Turnkey HMI Solution for Your Electronics Projects' %}</h1>
+
+				<div class="tp-caption text-uppercase"
+					data-x="left" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="220"
+					data-start="1200"
+					data-fontsize="22"
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'A customizable display, proven electronics, and effortless integration.' %}</div>
+
+				<a class="tp-caption btn btn-primary custom-btn-style-1 text-uppercase font-weight-semibold"
+					data-x="left" data-hoffset="['15', '15', '35', '35']"
+					data-y="center" data-voffset="280"
+					data-start="1500" 
+					data-fontsize="['12', '12', '12', '22']"
+					href="{% url 'starter_kit:starter-kit-landing' %}"
+					data-transform_in="y:[-300%];opacity:0;s:500;">{% trans 'Contact Us for a Custom Offer' %}</a>
+			</li>
+			
+		</ul>
+	</div>
+</div>

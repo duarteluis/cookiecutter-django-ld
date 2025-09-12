@@ -1,0 +1,33 @@
+{% load static %}
+{% load i18n %}
+
+<div class="container">
+    <section class="features">
+        <div class="bento-container">
+            <a href="{% url 'tft:tft-list' %}" class="bento-item item1">
+                <h2 class="font-weight-extra-bold text-color-dark">TFT</h2>
+                <h3 class="font-weight-bold">Display</h3>
+            </a>
+            <a href="{% url 'lcd:lcd-landing' %}" class="bento-item item2">
+                <h2 class="font-weight-extra-bold text-color-secondary">LCD</h2>
+                <h3 class="font-weight-bold">Display</h3>
+            </a>
+            <a href="{% url 'starter_kit:starter-kit-landing' %}" class="bento-item item3">
+                <h2 class="font-weight-extra-bold text-color-dark">Embedded</h2>
+                <h3 class="font-weight-bold">Systems</h3>
+            </a>
+            <a href="{% url 'pcap:pcap-landing' %}" class="bento-item item4">
+                <h2 class="font-weight-extra-bold text-color-dark">PCAP</h2>
+                <h3 class="font-weight-bold">Touch</h3>
+            </a>
+            <a href="{% url 'custom_display:custom-display-landing' %}" class="bento-item item5">
+                <h2 class="font-weight-extra-bold text-color-dark">Custom</h2>
+                <h3 class="font-weight-bold">Displays</h3>
+            </a>
+            <a href="#" class="bento-item item6">
+                <h2 class="font-weight-extra-bold text-color-dark">Thermal</h2>
+                <h3 class="font-weight-bold">Printers</h3>
+            </a>
+        </div>
+    </section>
+</div>

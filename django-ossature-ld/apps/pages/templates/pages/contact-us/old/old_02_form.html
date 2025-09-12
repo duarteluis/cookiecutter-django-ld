@@ -1,0 +1,105 @@
+{% load static %}
+{% load i18n %}
+{% load contact_filters %}
+
+    <div class="container py-4">
+
+        {% if not message_posted %}
+
+        <div class="row mb-5">
+            <div class="col">
+
+                <form id="contactForm" class="contact-form-recaptcha-v3" action="{% url 'contact_us' %}" method="POST" novalidate="novalidate">
+                    {% csrf_token %}
+                    <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
+                        <strong>Success!</strong> Your message has been sent to us.
+                    </div>
+
+                    <div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
+                        <strong>Error!</strong> There was an error sending your message.
+                        <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <label class="required font-weight-bold text-dark text-2">First Name</label>
+                            {{ form.first_name|addcss:"form-control" }} {{ form.first_name.errors }}
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label class="required font-weight-bold text-dark text-2">Last Name</label>
+                            {{ form.last_name|addcss:"form-control" }} {{ form.last_name.errors }}
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="font-weight-bold text-dark text-2">Email Address *</label>
+                            {{ form.email|addcss:"form-control" }}
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="font-weight-bold text-dark text-2">Subject</label>
+                            {{ form.subject|addcss:"form-control" }}
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="required font-weight-bold text-dark text-2">Message</label>
+                            {{ form.message|addcss:"form-control" }}
+                        </div>
+                    </div>
+                    {{ form.captcha }}
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <input type="submit" value="Send Message" class="btn btn-primary btn-modern" data-loading-text="Loading...">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-lg-4">
+
+                <div class="overflow-hidden mb-3">
+                    <h4 class="pt-5 mb-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" data-plugin-options="{'accY': -200}" style="animation-delay: 200ms;">Get in <strong>Touch</strong></h4>
+                </div>
+                <div class="overflow-hidden mb-3">
+                    <p class="lead text-4 mb-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="400" data-plugin-options="{'accY': -200}" style="animation-delay: 400ms;">We are here to answer any questions you may have.</p>
+                </div>
+                <div class="overflow-hidden">
+                    <p class="mb-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="600" data-plugin-options="{'accY': -200}" style="animation-delay: 600ms;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius.</p>
+                </div>
+
+            </div>
+            <div class="col-lg-4 offset-lg-1 appear-animation animated fadeIn appear-animation-visible" data-appear-animation="fadeIn" data-appear-animation-delay="800" data-plugin-options="{'accY': -200}" style="animation-delay: 800ms;">
+
+                <h4 class="pt-5">Our <strong>Office</strong></h4>
+                <ul class="list list-icons list-icons-style-3 mt-2">
+                    <li><i class="fas fa-map-marker-alt top-6"></i> <strong>Address:</strong> route de Vevey 105<br>1618 Châtel-St-Denis<br>Switzerland</li>
+                    <li><i class="fas fa-phone top-6"></i> <strong>Phone:</strong> (+41) 21 948 20 80</li>
+                </ul>
+
+            </div>
+            <div class="col-lg-3 appear-animation animated fadeIn appear-animation-visible" data-appear-animation="fadeIn" data-appear-animation-delay="1000" data-plugin-options="{'accY': -200}" style="animation-delay: 1000ms;">
+
+                <h4 class="pt-5">Business <strong>Hours</strong></h4>
+                <ul class="list list-icons list-dark mt-2">
+                    <li><i class="far fa-clock top-6"></i> Mon - Thu - 08:30 to 17:00</li>
+                    <li><i class="far fa-clock top-6"></i> Fri - 08:30 to 16:00</li>
+                    <li><i class="far fa-clock top-6"></i> Sat & Sun - Closed</li>
+                </ul>
+
+            </div>
+        </div>
+        {% else %}
+            <!-- TODO review bloc message thank you (more fun) -->
+            <div><h4 class="heading-primary mt-lg">{% trans "Dear" %} <strong>{{ firstname }}</strong> {% trans ", your message has been sent successfully, thank you." %}</h4></div>
+            <span class="img-thumbnail">
+                <img class="img-responsive" width="20%" src="{% static 'images/contact-us/email-notification.png' %}" alt="email notification">
+            </span>
+        {% endif %}
+
+    </div>
+

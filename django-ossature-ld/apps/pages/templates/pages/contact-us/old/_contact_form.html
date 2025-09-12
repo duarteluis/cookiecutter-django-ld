@@ -1,0 +1,104 @@
+{% load static %}
+{% load i18n %}
+{% load contact_filters %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="alert alert-success hidden mt-lg" id="contactSuccess">
+                {% trans "<strong>Success!</strong> Your message has been sent to us." %}
+            </div>
+
+            <div class="alert alert-danger hidden mt-lg" id="contactError">
+                <strong>{% trans "Error!" %}</strong> {% trans "There was an error sending your message." %}
+                <span class="font-size-xs mt-sm display-block" id="mailErrorMessage"></span>
+            </div>
+            {% if not message_posted %}
+            <h2 class="mb-sm mt-sm">{% trans "<strong>Contact</strong> Us" %}</h2>
+
+            <form id="contactForm" hx-put="{% url 'frontend:contact_us' %}" hx-include="#contactForm" hx-disabled-elt="this" hx-swap="none">
+                {% csrf_token %}
+                <div class="row">
+
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <label>{% trans "Your Firstname" %} *</label>
+                            <div data-toggle="tooltip">
+                                {{ form.first_name|addcss:"form-control" }} {{ form.first_name.errors }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>{% trans "Your Lastname" %} *</label>
+                            <div data-toggle="tooltip">
+                                {{ form.last_name|addcss:"form-control" }} {{ form.last_name.errors }}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                            <label>{% trans "Your email address" %} *</label>
+                            <div data-toggle="tooltip" title="Enter your Email address">{{ form.email|addcss:"form-control" }}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label>{% trans "Subject" %}</label>
+                            <div data-toggle="tooltip" title="Enter your subject">{{ form.subject|addcss:"form-control" }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label>{% trans "Message" %} *</label>
+                            <div data-toggle="tooltip" title="Type your message here.">{{ form.message|addcss:"form-control" }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    {#  {{ form.captcha }} #}
+                    <div class="col-md-6">
+                        <button value="send" type="submit" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
+                            {% trans "Send message" %} <i class="fa fa-envelope-o"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            {% else %}
+                <!-- TODO review bloc message thank you (more fun) -->
+                <div><h4 class="heading-primary mt-lg">{% trans "Dear" %} <strong>{{ firstname }}</strong> {% trans ", your message has been sent successfully, thank you." %}</h4></div>
+                <span class="img-thumbnail">
+                    <img class="img-responsive" src="{% static 'images/contact-us/email-notification.png' %}" alt="email notification">
+                </span>
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+
+            <h4 class="heading-primary mt-lg">{% trans "Get in <strong>Touch</strong>" %}</h4>
+            <!-- TODO review this text -->
+            <p>{% trans "We are here to answer any questions you may have." %}</p>
+
+            <hr>
+
+            <h4 class="heading-primary">{% trans "The <strong>Office</strong>" %}</h4>
+            <ul class="list list-icons list-icons-style-3 mt-xlg">
+                <!-- TODO microdata for address and phone links -->
+                <li><i class="fa fa-map-marker"></i> <strong>{% trans "Address:" %}</strong><br> Route de Vevey 105<br>
+                    1618 Chatel-St-Denis<br>
+                    {% trans "Switzerland" %}<br></li>
+                <li><i class="fa fa-phone"></i> <strong>{% trans "Phone:" %}</strong> <a href="tel:+41219482080">  +41 21 948 20 80</a></li>
+                <li><i class="fa fa-fax"></i> <strong>{% trans "Fax:" %}</strong> <a href="tel:+41219482088"> +41 21 948 20 88</a></li>
+                <li><i class="fa fa-envelope"></i> <strong>{% trans "Email:" %}</strong> <a href="mailto:%69n%66&#111;&#64;%6fp%74&#111;l%6fg&#105;&#99;%2e&#99;&#104;">info&#64;optologic.ch</a></li>
+            </ul>
+
+            <hr>
+
+        </div>
+
+    </div>
+
+</div>

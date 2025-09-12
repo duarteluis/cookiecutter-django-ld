@@ -1,0 +1,22 @@
+{% load static %}
+{% load i18n %}
+
+<section class="section section-with-divider pb-none mb-lg">
+    <div class="container">
+        <div class="row mb-xl">
+            <div class="col-md-12 center">
+                <h2 class="mb-xl"><strong>{% trans "Who " %}</strong>{% trans "We Are" %}</h2>
+                <hr>
+                <p>
+                    {% trans "OPTO LOGIC TECHNOLOGY S.A. is a Swiss company active for over  <strong> " %} {{ opto_years_old }}  {% trans "years </strong> in consulting, study, production, sale and support of display solutions and printing systems. We have a <strong>strongly customer oriented</strong> organisation and we are able to offer solutions tailored to your needs, whether on the basis of standard products or partially to fully customized products." %}
+                </p>
+
+                <p>
+                    {% trans "Our long experience and the close collaboration we entertain with our partners, based on long-term relationships, enable us to bring the best services to our Customers." %}
+                </p>
+
+                <a href="{% url 'about_us' %}" class="btn btn-color btn-primary btn-lg mr-xs mb-sm">{% trans "Read More" %}</a>
+            </div>
+        </div>
+    </div>
+</section>

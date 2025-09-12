@@ -1,0 +1,13 @@
+<div class="text-center py-5">
+    <h4 class="heading-primary">
+        {% blocktrans with first_name=first_name %}
+            Thank you {{ first_name }}, your message has been successfully sent.
+        {% endblocktrans %}
+    </h4>
+    <div class="my-4">
+        <img src="{% static 'images/contact-us/email-notification.png' %}" alt="Email sent" width="150" class="img-fluid" />
+    </div>
+    <p class="lead">
+        {% trans "We will get back to you as soon as possible." %}
+    </p>
+</div>

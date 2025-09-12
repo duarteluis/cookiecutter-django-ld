@@ -15,13 +15,13 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from .base import *
 from .apps import *
 
-{% if cookiecutter.database == "sqlite" %}
+# {% if cookiecutter.database == "sqlite" %}
 from .database_dev import *
 # from .database_prod import *
-{% elif cookiecutter.database == "postgresql" %}
+# {% elif cookiecutter.database == "postgresql" %}
 # from .database_dev import *
-from .database_prod import *
-{% endif %}
+# from .database_prod import *
+# {% endif %}
 
 ALLOWED_HOSTS = []
 

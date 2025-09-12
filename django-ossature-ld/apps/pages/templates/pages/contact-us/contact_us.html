@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block topnav %}
+{% include 'includes/_topnav.html' with active_tab='contact_us' %}
+{% endblock %}
+
+{% block title %}
+    Contact Us -
+{% endblock %}
+
+{% block extraHeader %}
+
+{% endblock %}
+
+{% block slideshow %}
+{% endblock %}
+
+{% block content %}
+    <div role="main" class="main">
+        {% include 'pages/contact-us/_01_top_hero.html' %}
+        {% include 'pages/contact-us/_02_form.html' %}
+        {% include 'pages/contact-us/_03_map.html' %}
+
+    </div>
+
+{% endblock %}
+
+{% block script_de_fin %}
+    <!-- begin custom scripts for contact_us -->
+    {% include 'pages/contact-us/_script_recapcha.html' %}
+    {% include 'pages/contact-us/_script_map.html' %}
+    <script>
+      document.body.addEventListener('htmx:afterOnLoad', function(event) {
+        const triggerHeader = event.detail.xhr.getResponseHeader('HX-Trigger');
+        if (triggerHeader) {
+          const triggers = JSON.parse(triggerHeader);
+
+          if (triggers["reset-form"] !== undefined) {
+            const formId = triggers["reset-form"].form_id;
+            const form = document.getElementById(formId);
+            if (form) {
+              form.reset();
+            }
+          }
+        }
+      });
+
+      document.body.addEventListener('htmx:afterOnLoad', function(event) {
+        const triggerHeader = event.detail.xhr.getResponseHeader('HX-Trigger');
+        if (triggerHeader) {
+          const triggers = JSON.parse(triggerHeader);
+
+          if (triggers["refresh-messages"] !== undefined) {
+            htmx.ajax('GET', "{% url 'message_partial' %}", '#messages');
+          }
+        }
+      });
+    </script>
+
+{% endblock %}

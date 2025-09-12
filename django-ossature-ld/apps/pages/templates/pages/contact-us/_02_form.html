@@ -1,0 +1,95 @@
+{% load static %}
+{% load i18n %}
+{% load contact_filters %}
+
+<div class="container py-4">
+
+    <div id="form-container">
+        <div class="row mb-5">
+            <div class="col">
+                <form
+                   id="contact-form"
+                   method="post"
+                   action="{% url 'contact_us' %}"
+                   hx-post="{% url 'contact_us' %}"
+                   hx-trigger="submit"
+                   hx-swap="none"
+                   hx-include="[name='csrfmiddlewaretoken']"
+                >
+                    {% csrf_token %}
+
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <label class="required font-weight-bold text-dark text-2">{% trans "First Name" %}</label>
+                            {{ form.first_name|addcss:"form-control" }}
+                            {{ form.first_name.errors }}
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label class="required font-weight-bold text-dark text-2">{% trans "Last Name" %}</label>
+                            {{ form.last_name|addcss:"form-control" }}
+                            {{ form.last_name.errors }}
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="required font-weight-bold text-dark text-2">{% trans "Email Address" %}</label>
+                            {{ form.email|addcss:"form-control" }}
+                            {{ form.email.errors }}
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="required font-weight-bold text-dark text-2">{% trans "Subject" %}</label>
+                            {{ form.subject|addcss:"form-control" }}
+                            {{ form.subject.errors }}
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label class="required font-weight-bold text-dark text-2">{% trans "Message" %}</label>
+                            {{ form.message|addcss:"form-control" }}
+                            {{ form.message.errors }}
+                        </div>
+                    </div>
+
+                    {{ form.captcha }}
+
+                    <button type="submit" class="btn btn-primary">{% trans "Send" %}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-lg-4">
+            <div class="overflow-hidden mb-3">
+                <h4 class="pt-5 mb-0">{% trans "Get in" %} <strong>{% trans "Touch" %}</strong></h4>
+            </div>
+            <div class="overflow-hidden mb-3">
+                <p class="lead text-4 mb-0">{% trans "We are here to answer any questions you may have." %}</p>
+            </div>
+            <div class="overflow-hidden">
+                <p class="mb-0">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}</p>
+            </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1">
+            <h4 class="pt-5">{% trans "Our" %} <strong>{% trans "Office" %}</strong></h4>
+            <ul class="list list-icons list-icons-style-3 mt-2">
+                <li><i class="fas fa-map-marker-alt top-6"></i> <strong>{% trans "Address" %}:</strong> route de Vevey 105, 1618 Châtel-St-Denis</li>
+                <li><i class="fas fa-phone top-6"></i> <strong>{% trans "Phone" %}:</strong> (+41) 21 948 20 80</li>
+            </ul>
+        </div>
+        <div class="col-lg-3">
+            <h4 class="pt-5">{% trans "Business" %} <strong>{% trans "Hours" %}</strong></h4>
+            <ul class="list list-icons list-dark mt-2">
+                <li><i class="far fa-clock top-6"></i> Mon - Thu - 08:30 to 17:00</li>
+                <li><i class="far fa-clock top-6"></i> Fri - 08:30 to 16:00</li>
+                <li><i class="far fa-clock top-6"></i> Sat & Sun - Closed</li>
+            </ul>
+        </div>
+    </div>
+
+</div>

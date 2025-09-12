@@ -1,0 +1,21 @@
+{% load static %}
+{% load i18n %}
+
+<div class="home-intro bg-primary" id="home-intro">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9">
+                <h2>{% trans 'The fastest way <strong class="font-weight-extra-bold">to develop</strong> your custom project' %} <br> <i class="fas fa-long-arrow-alt-right"></i> <strong class="font-weight-extra-bold">OPTO Logic TECHNOLOGY</strong></h2>
+                <p class="mb-0">
+                    {% trans 'Please <strong class="font-weight-extra-bold">contact us</strong>, to study your needs.' %}
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <div class="get-started text-left text-lg-right">
+                    <a href="{% url 'contact_us' %}" class="btn btn-lg btn-dark  text-3 font-weight-semibold px-4 py-3">{% trans "Contact Us Now" %}</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

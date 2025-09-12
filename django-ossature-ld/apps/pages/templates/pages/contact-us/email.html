@@ -1,0 +1,265 @@
+{% load static %}
+{% load i18n %}
+
+{% block html %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+
+</head>
+<body STYLE="FONT-FAMILY: Tahoma">
+    <p>
+        <table border=0 cellSpacing=0 cellPadding=0 width="100%" bgColor=#e5e5e5><!-- CONTAINER TABLE Grey Background-->
+            <tr>
+                <td bgColor=#e5e5e5 width="100%">
+                    <table border=0 cellSpacing=0 cellPadding=0 width=700 bgColor=#e5e5e5 align=center><!-- CONTAINER TABLE -->
+                        <tr>
+                            <td height=40 width=25>&nbsp;</td>
+                            <td height=40 width=25>&nbsp;</td>                            
+                            <td height=40 width=25>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td width=25>&nbsp;</td>
+                            <td width=650>
+                                <table style="-moz-box-shadow: 3px 3px 20px rgba(0,0,0,0.5); -webkit-box-shadow: 3px 3px 20px rgba(0,0,0,0.5); box-shadow: 3px 3px 20px rgba(0,0,0,0.5)" border=0 cellSpacing=0 cellPadding=0 width=650 bgColor=#ffffff align=left><!-- MAIN TABLE - with shadow -->
+                                    <tr>
+                                        <td id=optologic vAlign=top width=650 colSpan=3>
+                                            <img style="DISPLAY: block" border=0 alt="" src="https://optologic.ch{% static "images/contact-us/email/bloc_sup.png" %}" width=650 height=15><!-- Image liserer sup -->
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td height=40 width=650 colSpan=3>&nbsp;</td>
+                                    </tr>
+                                    
+                                    <tr><!-- HEADER -->
+                                        <td width=40>&nbsp;</td>
+                                        
+                                        <td width=570>
+                                            <table border=0 cellSpacing=0 cellPadding=0 width=570 align=left>
+                                                <tr>
+                                                    <td style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px" vAlign=top width=265>
+                                                        <a style="LINE-HEIGHT: 16px; COLOR: #000000; FONT-SIZE: 12px; TEXT-DECORATION: underline" href="http://www.optologic.ch" target=_blank>
+                                                            <img style="DISPLAY: block" border=0 alt="OPTO Logic TECHNOLOGY S.A." src="https://optologic.ch{% static "img_contactus/email/LOGO-OPTO.png" %}" 
+                                                                width=354 height=72>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width=40>&nbsp;</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td height=60 width=40>&nbsp;</td>
+                                        <td height=60 width=570>&nbsp;</td>
+                                        <td height=60 width=40>&nbsp;</td>
+                                    </tr><!-- END HEADER -->
+                                    
+                                    <tr><!-- CONTENT - Text normal -->
+                                        <td width=40>&nbsp;</td>
+                                        <td width=570>
+                                            <p style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; 
+                                                FONT-FAMILY: Arial,Tahoma,Geneva; LETTER-SPACING: 0.1em; COLOR: #000000; FONT-SIZE: 16px; PADDING-TOP: 0px; line-heihgt: 18px">
+                                                Thank you for getting in touch!
+                                            </p>
+                                            
+                                            <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px">
+                                                Dear <strong>{{fname}}</strong>,<br><br>
+                                            </p>
+                                        </td>
+                                        <td width=40>&nbsp;</td>
+                                    </tr>
+                                    
+                                    <tr> <!-- 1er paragraphe -->
+                                        <td width=40>&nbsp;</td>
+                                        <td width=570> 
+                                            <table border=0 cellSpacing=0 cellPadding=0 width=570 align=left>
+                                                <tr>
+                                                    <td vAlign=center align=left>
+                                                        <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px" align="justify">
+                                                            Thank you for your request concerning "{{subject}}".
+                                                        </p>
+                                                        <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px" align="justify">
+                                                            Someone from our Customer Service will reply you as soon as possible.
+                                                        </p>
+                                                        <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px" align="justify">
+                                                            Best regards.
+                                                        </p>
+                                                        
+                                                    </td>                                                                                               
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width=40>&nbsp;</td>
+                                    </tr>
+
+                                    <tr><!-- DIVISION Closing line -->
+                                        <td height=15 width=650 colSpan=3>&nbsp;</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td height=5 width=40>&nbsp;</td>
+                                        <td height=5 width=570>Information</td>
+                                        <td height=5 width=40>&nbsp;</td>
+                                    </tr>
+
+                                    <tr><!-- DIVISION Closing line -->
+                                        <td height=15 width=650 colSpan=3>&nbsp;</td>
+                                    </tr>
+
+                                    <tr> <!-- 4eme paragraphe -->
+                                        <td width=40>&nbsp;</td>
+                                        <td width=570> 
+                                            <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px">
+                                                <strong>Last name :</strong> {{ lname }}
+                                            </p>
+
+                                            <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px">
+                                                <strong>First name :</strong> {{ fname }}
+                                            </p>
+
+                                            <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px">
+                                                <strong>Your email :</strong> {{ email }}
+                                            </p>
+
+                                            <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px">
+                                                <strong>Your subject :</strong> {{ subject }}
+                                            </p>
+
+                                            <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px">
+                                                <strong>Your message :</strong>
+                                            </p>
+
+                                            <p style="LINE-HEIGHT: 16px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #000000; FONT-SIZE: 12px">
+                                                {{ message }}
+                                            </p>
+
+
+                                        </td>
+                                        <td width=40>&nbsp;</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td height=20 width=40>&nbsp;</td>
+                                        <td height=20 width=570>&nbsp;</td>
+                                        <td height=20 width=40>&nbsp;</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td width=40>&nbsp;</td>
+                                        <td width=570>
+                                            <table border=0 cellSpacing=0 cellPadding=0 width="100%">
+                                                <tr>                                    
+                                                    <td width=150>&nbsp;</td>
+                                                    <td width=91>
+                                                        <a style="COLOR: #000000" href="http://www.optologic.ch">
+                                                            <img style="DISPLAY: block" border=0 alt="INFOS" src="https://optologic.ch{% static "images/contact-us/email/button_info.png" %}" width=91 height=91>
+                                                        </a>
+                                                    </td>
+                                                    <td width=168>&nbsp;</td>
+                                                    <td width=91>
+                                                        <a style="COLOR: #000000" href="mailto:info@optologic.ch?subject={{ subject }}">
+                                                            <img style="DISPLAY: block" border=0 alt="CONTACT" src="https://optologic.ch{% static "images/contact-us/email/button_mail.png" %}" width=91 height=91>
+                                                        </a>
+                                                    </td>
+                                                    <td width=150>&nbsp;</td>
+                                                </tr>
+                                            </table>
+                                            
+                                        </td>
+                                        <td width=40>&nbsp;</td>
+                                    </tr>
+                                                                        
+                                    <tr><!-- DIVISION Closing line -->
+                                        <td height=15 width=650 colSpan=3>&nbsp;</td>
+                                    </tr>
+                                    
+                                    <tr><!-- FOOTER - 1/3-2/3 -->
+                                        <td width=40>&nbsp;</td>
+                                        <td width=570>
+                                            <table border=0 cellSpacing=0 cellPadding=0 width=570 align=left>
+                                                <tr>
+                                                    <td style="LINE-HEIGHT: 14px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #555555; FONT-SIZE: 10px" vAlign=top width=164 align=left>
+                                                        <p style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 14px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 10px; PADDING-TOP: 0px">
+                                                            OPTO Logic TECHNOLOGY S.A.<br>
+                                                            Route de Vevey 105<br>
+                                                            1618 Châtel-St-Denis<br>
+                                                            Suisse.<br>
+                                                            T +41 (0)21 948 20 80<br>
+                                                            F +41 (0)21 948 20 88<br>
+                                                            
+                                                            <a style="COLOR: #000000" href="https://optologic.ch" target=_blank>optologic.ch</a><br>
+                                                            <a style="COLOR: #000000" href="mailto:info@optologic.ch">info@optologic.ch</a><br>
+                                                        </p>
+                                                    </td>
+                                                    <td width=39>&nbsp;</td>
+                                                    <td style="LINE-HEIGHT: 14px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #555555; FONT-SIZE: 10px" vAlign=top width=367 align=left>
+                                                        <img style="DISPLAY: block" border=0 alt="Display TFT, LCD, Touch screens, Printers"  
+                                                            src="https://optologic.ch{% static "images/contact-us/email/302x81_MOTTO_OPTO_Logic_Technology.png" %}" width=302 height=81>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        
+                                        <td width=40>&nbsp;</td>
+                                    </tr><!-- END FOOTER - 1/3-2/3 -->
+                                    
+                                    <tr>
+                                        <td height=20 width=40>&nbsp;</td>
+                                        <td height=20 width=570>&nbsp;</td>
+                                        <td height=20 width=40>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            
+                            <td width=25>&nbsp;</td>
+                        </tr>
+                        
+                        <tr>
+                            <td height=20 width=25>&nbsp;</td>
+                            <td height=20 width=650>&nbsp;</td>
+                            <td height=20 width=25>&nbsp;</td>
+                        </tr>
+                        
+                        <tr>
+                            <td height=30 width=25>&nbsp;</td>
+                            <td style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 14px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: Arial,Tahoma,Geneva; COLOR: #555555; 
+                                FONT-SIZE: 10px; PADDING-TOP: 0px" width=650 align=left>
+                                <p>
+                                    Afin de vous assurer que la newsletter d'Optologic accède bien à votre boîte mails et que toutes les images apparaissent correctement, 
+                                    veuillez enregistrer l’adresse suivante dans le répertoire de votre programme e-mails 
+                                    
+                                    <a style="COLOR: #000000" href="mailto:news@optologic.ch?subject={{ subject }}">news@optologic.ch</a>.
+                                    
+                                    Merci de ne pas répondre à cet e-mail. Si vous avez des questions supplémentaires ou des commentaires, 
+                                    n'hésitez pas à nous contacter à l’adresse suivante: 
+                                    
+                                    <a style="COLOR: #000000" href="mailto:info@optologic.ch?subject={{ subject }}">info@optologic.ch</a>.
+                                </p>
+
+                                <p>
+                                    Au cas où vous ne souhaiteriez pas recevoir d’autres newsletters, veuillez cliquer 
+                                                   
+                                    <a style="COLOR: #000000" href="$linkBottom$" target=_blank>ici</a>.
+                                </p>
+                            </td>
+                            
+                            <td height=30 width=25>&nbsp;</td>
+                        </tr>
+                        
+                        <tr>
+                            <td height=20 width=25>&nbsp;</td>
+                            <td height=20 width=650>&nbsp;</td>
+                            <td height=20 width=25>&nbsp;</td>
+                        </tr>
+                    </table><!-- END CONTAINER TABLE -->
+                </td>
+            </tr>
+    </table><!-- END CONTAINER TABLE Grey Background -->
+    </p>
+</body>
+</html> 
+{% endblock %}

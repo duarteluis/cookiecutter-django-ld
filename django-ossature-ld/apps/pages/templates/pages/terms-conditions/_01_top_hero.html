@@ -1,0 +1,62 @@
+{% load static %}
+{% load i18n %}
+
+<div class="slider-container rev_slider_wrapper" style="height: 800px;">
+    <div id="revolutionSlider" class="slider rev_slider manual" data-version="5.4.8">
+        <ul>
+            <li data-transition="fade">
+                <img src="{% static 'images/terms-conditions/pexels-codioful-7134990.jpg' %}"
+                    alt=""
+                    data-bgposition="center center" 
+                    data-bgfit="cover" 
+                    data-bgrepeat="no-repeat"
+                    class="rev-slidebg">
+
+                <h1 class="tp-caption text-uppercase font-weight-bold"
+                    data-x="right" data-hoffset="['15', '15', '35', '35']"
+                    data-y="center" data-voffset="-40"
+                    data-start="800" 
+                    data-fontsize="40"
+                    style="letter-spacing: -1px;" 
+                    data-transform_in="y:[-300%];opacity:0;s:500;">{% trans '<strong class="text-secondary">Terms</strong> & Conditions ' %}</h1>
+
+                <div class="tp-caption text-uppercase"
+                    data-x="right" data-hoffset="['15', '15', '35', '35']"
+                    data-y="center" data-voffset="0"
+                    data-start="1200"
+                    data-fontsize="22"
+                    data-transform_in="y:[-300%];opacity:0;s:500;">{% trans "These terms and conditions are subject to change without notice. The online version is the current one." %}</div>
+
+                <div class="tp-caption"
+                    data-x="right" data-hoffset="['15', '15', '35', '35']"
+                    data-y="center" data-voffset="40"
+                    data-start="1600"
+                    data-fontsize="22"
+                    data-transform_in="y:[-300%];opacity:0;s:500;">{% trans "If you have any questions, please do not hesitate to contact us." %}</div>
+
+                <a class="tp-caption btn btn-primary custom-btn-style-1 text-uppercase font-weight-semibold"
+                    data-x="right" data-hoffset="['15', '15', '35', '35']"
+                    data-y="center" data-voffset="100"
+                    data-start="1900" 
+                    data-fontsize="['12', '12', '12', '22']"
+                    href="{% url 'contact_us' %}"
+                    data-transform_in="y:[-300%];opacity:0;s:500;">{% trans "Contact us" %}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="home-intro" class="home-intro custom-home-intro bg-color-primary m-0">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-3 mb-lg-0">
+                <p class="text-color-light my-1">
+                    {% trans "Below is a our privacy policy" %}
+                </p>
+            </div>
+            <div class="col-lg-4 text-left text-lg-right">
+                <a href="#custom" class="btn btn-secondary custom-btn-style-1 text-uppercase font-weight-semibold ">{% trans "Learn more" %}</a>
+            </div>
+        </div>
+    </div>
+</div>

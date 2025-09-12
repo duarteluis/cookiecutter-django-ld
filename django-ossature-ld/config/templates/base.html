@@ -1,0 +1,26 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+	<head>
+        {% include 'includes/head/head-meta.html' %}
+        {% include 'includes/head/head-css.html' %}
+        {% include 'includes/head/head-js.html' %}
+		{% block extraHeader %} {% endblock %}
+	</head>
+
+    <body>
+    	<div class="body">
+			{% block topnav %} {% endblock %}
+			<div role="main" class="main">
+				{% block content %}<h1>Hello, world!</h1>{% endblock %}
+			</div>
+			{% include 'includes/footer.html' %}
+		</div>
+
+        {% include 'includes/scripts.html' %}
+        {% block extraScript %}{% endblock %}
+
+    </body>
+</html>
